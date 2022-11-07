@@ -9,6 +9,7 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         plugin = {
                 "pretty",
+                "json:target/cucumber.json",
                 "html:target/cucumber-report.html",
                 "rerun:target/rerun.txt",
                 "me.jvt.cucumber.report.PrettyReports:target/cucumber"
@@ -16,7 +17,7 @@ import org.junit.runner.RunWith;
         features = "src/test/resources/adidas.feature" ,
         glue = "com/adidas/step_definitions" ,
         dryRun = false,
-        tags = "@adidas1"
+        tags = "@adidas"
         //publish = true
 )
 public class CukesRunner {
